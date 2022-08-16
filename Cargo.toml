@@ -6,5 +6,6 @@ edition = "2021"
 [dependencies]
 hyper = { version = "0.14", features = ["full"] }
 tokio = { version = "1", features = ["full"] }
+http = "0.2"
 pretty_env_logger = "0.4"
 console-subscriber = "0.1"

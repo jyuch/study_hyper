@@ -890,6 +890,7 @@ name = "study_hyper"
 version = "0.1.0"
 dependencies = [
  "console-subscriber",
+ "http",
  "hyper",
  "pretty_env_logger",
  "tokio",
