@@ -32,7 +32,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             if let Err(err) = Http::new()
                 .http1_preserve_header_case(true)
                 .http1_title_case_headers(true)
+                .http2_enable_connect_protocol()
                 .serve_connection(stream, service_fn(proxy))
+                .with_upgrades()
                 .await
             {
                 println!("Failed to serve connection: {:?}", err);
